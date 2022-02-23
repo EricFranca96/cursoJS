@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de nacionalidade</title>
+</head>
+<body>
+    <h1>Qual a sua nacionalidade</h1>
+    Qual a sua nacionalidade: <input type="text" name="eua" class="eua">
+    <input type="button" value="verificar" onclick="descobrir()">
+    <div id="res">
+
+    </div>
+    <script>
+        function descobrir() {
+        var pais = window.document.querySelector('input.eua')
+        var res = window.document.querySelector('input.res')
+        var txt = Text(pais.value)
+        res.innerHTML = `<p>Sua nacionalidade é: ${txt} </p>`
+        if (txt == eua) {
+            res.innerHTML = `<p>Você é brasileiro</p>`
+        }else{
+            res.innerHTML = `<p>Você é estrangeiro</p>`
+        }
+    }        
+    </script>
+</body>
+</html>
